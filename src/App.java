@@ -1,9 +1,15 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        // Here's my algorithm to add two string numbers
-        System.out.println("\n===================================\n");
-        addTwoStringNumbers("9999", "1");
-        System.out.println("\n===================================\n");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        String num1 = sc.nextLine();
+        System.out.print("Enter second number: ");
+        String num2 = sc.nextLine();
+
+        addTwoStringNumbers(num1, num2);
     }
 
     public static void addTwoStringNumbers(String num1, String num2) {
@@ -31,6 +37,8 @@ public class App {
             answer = addedNum + answer;
         }
 
+        System.out.println("\n===================================\n");
         System.out.println("Sum of two numbers: " + (carry == 0 ? "" : carry) + answer);
+        System.out.println("\n===================================\n");
     }
 }
